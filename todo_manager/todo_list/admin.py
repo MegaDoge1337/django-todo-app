@@ -4,5 +4,5 @@ from todo_list.models import ToDoItem
 # Register your models here.
 @admin.register(ToDoItem)
 class ToDoItemAdmin(admin.ModelAdmin):
-  list_display = "title", "is_done"
-  pass
+  list_display = "id", "title", "is_done"
+  list_display_links = "id", "title"
