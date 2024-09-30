@@ -6,4 +6,17 @@
 
 {% block body %}
   <h1>To do List app</h1>
+  <h2>ToDos:</h2>
+  <ul>
+    {% for todo_item in todo_items %}
+      <li>
+        {{ todo_item.title }}
+        {% if todo_item.is_done %}
+          (Done)
+        {% else %}
+          (Waiting)
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
 {% endblock body %}
